@@ -1,0 +1,19 @@
+<form method="post" action="{% url 'polls:login' %}">
+    {% csrf_token %}
+    <label for="username"> id put</label>
+    <input type="text"  name="username" id="username">
+    <label for="password">password</label>
+    <input type="password" name="password" id="password">
+    <button type="submit">login</button>
+</form>
+
+
+{#{% if latest_question_list %}#}
+{#    <ul>#}
+{#        {% for question in latest_question_list %}#}
+{#            <li><a href="{% url 'polls:detail' question.id %}"> {{ question.question_text }}</a></li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p>No user are available.</p>#}
+{#{% endif %}#}
